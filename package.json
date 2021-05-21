@@ -3,6 +3,10 @@
   "scripts": {
     "test": "ts-node src/index.ts"
   },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "wait-for-async": "^0.5.0"
+  },
   "devDependencies": {
     "@types/node": "^15.6.0",
     "gts": "^3.1.0",
