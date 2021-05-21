@@ -1,9 +1,6 @@
 import axios from 'axios';
 import waitFor from 'wait-for-async';
 
-const url =
-  'https://syncquickbasetoringcentral.azurewebsites.net/api/CallRingCentral';
-
 (async () => {
   let count = 0;
   let successCount = 0;
@@ -11,7 +8,7 @@ const url =
   // eslint-disable-next-line no-constant-condition
   while (true) {
     count += 1;
-    const r = await axios.get(url);
+    const r = await axios.get(process.env.URL!);
     const data = r.data;
     if (data.indexOf('StatusCode: 401') !== -1) {
       successCount += 1;
